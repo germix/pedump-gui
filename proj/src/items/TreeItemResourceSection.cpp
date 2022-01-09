@@ -97,7 +97,7 @@ QString DumpStringTable(
 
 				for(unsigned int k = 0; k < qMin(len, (WORD)64); k++)
 				{
-					char * s;
+					const char* s;
 					char szBuff[20];
 					char c = (char)pStrEntry[k];
 					switch(c)

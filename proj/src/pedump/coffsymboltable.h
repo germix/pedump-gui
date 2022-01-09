@@ -1,5 +1,6 @@
 #ifndef _COFFSymbolTable_H_
 #define _COFFSymbolTable_H_
+#include <windows.h>
 
 class COFFSymbolTable;
 
@@ -30,7 +31,8 @@ class COFFSymbol
 	PCSTR GetStorageClassName();
 	BOOL  GetNumberOfAuxSymbols()
 			{ return m_pSymbolData ? m_pSymbolData->NumberOfAuxSymbols : 0; }
-	GetAuxSymbolAsString( PSTR pszBuffer, unsigned cbBuffer );
+
+	BOOL GetAuxSymbolAsString( PSTR pszBuffer, unsigned int cbBuffer );
 	
 	friend class COFFSymbolTable;
 };
